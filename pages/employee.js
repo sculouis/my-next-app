@@ -47,17 +47,17 @@ export default function EmployeePage() {
                 </Card.Header>
                 <Accordion.Collapse eventKey="0">
                   <Card.Body>
-                    <div class="form-group">
-                      <label for="exampleInputEmail1">文字輸入</label>
+                    <div className="form-group">
+                      <label htmlFor="name">文字輸入</label>
                       <input
                         type="type"
-                        class="form-control"
-                        id="exampleInputEmail1"
+                        className="form-control"
+                        id="name"
                         name="name"
                         placeholder="文字輸入"
                         ref={register({ required: true })}
                       />
-                      <small id="emailHelp" class="form-text text-muted">
+                      <small id="emailHelp" className="form-text text-muted">
                         We'll never share your email with anyone else.
                       </small>
                       {errors.name && <span>This field is required</span>}
@@ -71,7 +71,7 @@ export default function EmployeePage() {
                         className="form-control"
                         control={control}
                       />
-                      <small id="emailHelp" class="form-text text-muted">
+                      <small id="emailHelp" className="form-text text-muted">
                         請輸入數字.
                       </small>
                     </Form.Group>
@@ -93,7 +93,6 @@ export default function EmployeePage() {
                         ref={register}
                       />{" "}
                     </Form.Group>
-                    <Form.Group>
                       <Form.Group as={Row}>
                         <Form.Label as="legend" column sm={2}>
                           Radios
@@ -125,14 +124,12 @@ export default function EmployeePage() {
                           />
                         </Col>
                       </Form.Group>
-                    </Form.Group>
                     <Form.Group>
                       <Controller
                         as={Select}
                         options={options}
                         isClearable={true}
                         name="myselect"
-                        ref={register}
                         control={control}
                         placeholder="請選擇....."
                       />
