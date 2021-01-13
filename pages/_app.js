@@ -1,7 +1,12 @@
-import '../styles/globals.css'
+import "../styles/main.scss";
 
-function MyApp({ Component, pageProps }) {
-  return <Component {...pageProps} />
+import TopMenu from "../layouts/topmenu";
+
+export default function MyApp({ Component, pageProps }) {
+  return (
+    <>
+      <TopMenu />
+      <Component {...pageProps} />
+    </>
+  );
 }
-
-export default MyApp
